@@ -1,0 +1,321 @@
+import logo from './logo.svg';
+import './App.css';
+import React from 'react';
+class Student extends React.Component
+{
+  render()
+  {
+    const MyAns="gowthaman"; 
+  return(
+        <>
+       <h1>welcome to class1</h1>{MyAns}
+          <h1>welcome to class1</h1>
+        <h1>welcome to class1</h1>
+        </>
+  );
+  }
+}
+class Emp extends Student
+{
+  render()
+  {   
+
+    return(      
+        <>
+      <h2>Inheritance Class</h2>
+        <Student />
+      </>
+      );
+  }
+}
+function App() {
+  return (
+    /*
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+    </div>
+    */
+   <>
+    <h1> Hello Wrold</h1>
+    <h1> Hello Wrold</h1>
+    <h1> Hello Wrold</h1>
+    <h1> Hello Wrold</h1>
+    </>
+  );  
+}
+
+/*
+function Ajay()
+{
+  const MyVar=["ABC","DEF","GHI"];
+  const MyListDemo=MyVar.map((var1)=><h1>{var1}</h1>);
+  return(    
+    <>
+    */
+   { /*<Emp /> */}
+    {/*<App /> */}
+    /*<Student />
+    {MyListDemo}
+    
+    <h1>welcome to all</h1>
+    </>
+  );
+}
+*/
+/*
+function Ajay()
+{
+  // destructing
+  const MyArray=["hai","to","all","members"];
+
+  // old way
+  /*const Answer1=MyArray[0];
+  const Answer2=MyArray[1];
+  const Answer3=MyArray[2];
+  const Answer4=MyArray[3];*/
+  
+  // new way destructing
+  /*
+  const [Answer1,,Answer3,Answer4]=MyArray;
+
+  return(
+    <>
+    <h1> Result </h1>
+    {Answer1}<br></br>
+    {/*Answer2*//*}
+    <br></br>
+    {Answer3}<br></br>
+    {Answer4}<br></br>
+  </>
+  );
+  
+}*/
+/*
+function ArithOperation(a,b)
+{
+  const v1=a+b;
+  const v2=a-b;
+  const v3=a*b;
+  return [v1,v2,v3];
+}*/
+/*
+const ArithOperation=(a,b)=>{
+  
+  const v1=a+b;
+  const v2=a-b;
+  const v3=a*b;
+  return [v1,v2,v3];
+}
+function Ajay()
+{  
+const [Ans1,Ans2,Ans3]=ArithOperation(22,33);
+const ResArrray=[Ans1,Ans2,Ans3];
+const FinalAns=ResArrray.map((item)=><p>{item}</p>);
+  return( 
+  <h1>Test{FinalAns}</h1>
+);
+}*/
+//export default App;
+
+//destructive objects old way
+/*const sdetails={ // json object
+  sno:1,
+  sname:'ajay',
+  sadd:'karur',
+  height:165,
+  weight:75
+}
+//function myfunction(data)
+const myfunction=(data)=>
+{
+  return 'the sno is '+data.sno+" , name = "+data.sname+", height = "+data.height+" , weight="+data.weight;
+}
+function Ajay()
+{
+const FinalResult=myfunction(sdetails)
+  return(
+    <>
+    <h1>{FinalResult} </h1>    
+    <h1>{sdetails.sno} </h1>    
+    <h1>{sdetails.sname} </h1>    
+    <h1>{sdetails.height} </h1>    
+    <h1>{sdetails.weight} </h1>    
+    </>
+  );
+
+}*/
+
+// destructing object new way
+/*const sdetails={ // json object
+  sno:1,
+  sname:'ajay',
+  sadd:'karur',
+  height:165,
+  weight:75
+}
+
+//function myfunction({sno,sname,sadd,height,weight})  // new way destructing object
+const myfunction=({sno,sname,sadd,height,weight})=>
+{
+  return sno+"  "+sname+" "+sadd+" "+height+" "+weight;
+}
+function Ajay()
+{
+  const FResult=myfunction(sdetails);
+  return(
+    <h1>{FResult}</h1>
+  );
+}
+*/
+// destructing nested object
+/*
+const sdetails={ // json object
+  sno:1,
+  sname:'ajay',
+  sadd:'karur',
+  height:165,
+  weight:75,
+  marks:{
+    tamil:55,
+    english:88,
+    maths:100
+  }
+}
+function myfunction(data) // old way
+{
+  return 'sno='+data.sno+', sname='+data.sname+' tamil marks ='+data.marks.tamil+' eng marks:'+data.marks.english;
+}
+// new way
+function myfunction1({sno,sname,marks:{tamil},marks:{english},marks:{maths}})
+{
+  return 'sno='+sno+', sname='+sname+' tamil marks ='+tamil+' eng marks:'+english+"maths mark:"+maths;
+}
+
+
+function Ajay()
+{
+  const ResData=myfunction1(sdetails);
+  return(
+    <h1>{ResData}</h1>
+  );
+}
+*/
+// spread operator (...)
+/*
+const arr1=[1,2,3,4,5,6];
+const arr2=[5,6,7,8,9,10];
+const CombineResarr=[...arr1,...arr2];
+const [f1,f2,f3,...rem]=CombineResarr;
+function Ajay()
+{
+  return(
+    <>
+    <h1>Answer:{f1}</h1>
+    <h1>Answer:{f2}</h1>
+    <h1>Answer:{f3}</h1>
+    <h1>Answer:{rem}</h1>
+    </>
+    
+  );
+}*/
+// spread operator (...) using objects
+/*
+const StudList1={
+  sno:1,
+  name:'ajay',
+  mark:10
+}
+const StudList2={
+  address:'karur',
+  mark:100
+}
+/*function myfunction(data)
+{
+  return "sno:"+data.sno+"  name:"+data.name+" mark="+data.mark+"  address="+data.address;
+}*/
+/*
+const myfunction=({sno,name,mark,address})=>
+{
+  return "sno:"+sno+"  name:"+name+" mark="+mark+"  address="+address;
+}
+
+function Ajay()
+{  
+  const CombineObj={...StudList1,...StudList2};
+  const ResAns=myfunction(CombineObj);
+return(
+  
+  <h1>Answer:{ResAns}</h1>
+);
+}
+*/
+//1-named exports --> 1) inline - individually
+//export const Sname="gowthaman";
+// don't forget to import App.js in index.js file
+// ex: import { Sname } from './App';
+// ex: ReactDOM.render(Sname, document.getElementById('root'));
+
+
+// 1-named exports -->2) all at once at the bottom
+//const Sname="gowthaman";
+//const age=40;
+//export {Sname,age};
+// don't forget to import App.js in index.js file
+// ex: import { Sname,age } from './App';
+// ex: const Res="student name "+Sname+" age = "+age;
+// ex: ReactDOM.render(Res, document.getElementById('root'));
+
+// 2. default exports
+// we can give both function and class
+// note: functionname and classname must be first letter should be caps
+// syntax: export default functionname or classname
+// don't forget to import function module or class module in index.js file
+// import functionname or classname from './App'
+// import Ajay from './App';
+// ReactDOM.render(<Ajay />,document.getElementById('root;));
+
+/*
+function Ajay()
+{
+  return(
+    <h1>Hai to All</h1>
+  );
+}
+
+export default Ajay;*/
+// Ternary operator -----------------------------------------------
+/*
+function fun1()
+{
+  return "True Statement";
+}
+
+function fun2()
+{
+  return "False statement";
+}
+
+let test=false;
+export let Ans=test ? fun1() : fun2()
+*/
+//-----------------------------------------------------------------
+//---------props (properties) ---> arg or parameter passing--------
+// props --> keyword
+function AjayThimothi(props)
+{
+  return <h1> i have used {props.bike} bike and {props.car} car</h1>;
+}
+ export default AjayThimothi;
