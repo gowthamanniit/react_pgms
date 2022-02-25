@@ -1,0 +1,195 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+//import { Sname } from './App';     // 1.named exports. i) inline-individually. 
+//import { Sname,age } from './App'; // 1.named exports. ii) all at once at bottom
+// import Ajay from './App';    // 2. default exports
+import AjayThimothi, {Ans} from './App';
+import reportWebVitals from './reportWebVitals';
+import Timothi from './Timothy.js';
+import Mycomponent from './Ccomponents.js';
+import Myderive from './Ccomponents.js';
+import Testcons from './ConsDemo';
+import MyComp from './EventsDemo';
+import LoopWork from './LoopDemo';
+import LoginFunction from './Rforms';
+import AjayHooksForms from './RForms1';
+import Example from './useEffectwork';
+import Component1 from './UserContextDemo';
+
+//var name=<h1> welcome to react </h1>
+//const Myarray=["apple","banana","orange","mango"];
+
+//const Mylist=Myarray.map((myvar)=><p>{myvar}</p>);
+//const Mylist=<h1>gowthaman</h1>;
+
+//ReactDOM.render(<Ajay />, document.getElementById('root'));
+//ReactDOM.render(Mylist, document.getElementById('root'));
+//-----------------------------destructor comes in handy--------
+/*
+function operation(a,b)
+{
+    const Add=a+b;
+    const Sub=a-b;
+    const Mul=a*b;
+    const Div=a/b;
+    return [Add,Sub,Mul,Div]
+}
+
+const [A,B,C,D]=operation(33,4);
+
+const MyArr=[A,B,C,D];
+const ResultArray=MyArr.map((item)=><p>{item}</p>);
+
+//ReactDOM.render(A, document.getElementById('root'));
+ReactDOM.render(ResultArray, document.getElementById('root'));
+*/
+//ReactDOM.render(<Ajay />, document.getElementById('root'));
+//ReactDOM.render(Sname, document.getElementById('root'));
+
+//const Res='Student Name :'+Sname+" Age :"+age;
+//ReactDOM.render(Res, document.getElementById('root'));
+//ReactDOM.render(<Ajay />, document.getElementById('root'));
+//ReactDOM.render(Ans, document.getElementById('root'));
+//----------------------------------------
+/*const mytable=(
+    <center>
+    <table border='1' cellPadding="10" cellSpacing="0">
+    <tr><th>Sno</th><th>Student Name</th><th>Marks</th><th>Course</th></tr>
+    <tr><th>1</th><th>Ajay</th><th>88</th><th>React</th></tr>
+    <tr><th>2</th><th>Thimothi</th><th>89</th><th>Angular</th></tr>
+    <tr><th>3</th><th>Gowthaman</th><th>80</th><th>MongoDb</th></tr>
+    </table>
+    </center>
+);
+ReactDOM.render(mytable, document.getElementById('root'));*/
+//------------with  using   jsx ----------
+//const myAns=<h1>This is JSX javascript XML</h1>
+//ReactDOM.render(myAns, document.getElementById('root'));
+// ----------- without using jsx ---- create element ------
+/*
+const obj1={sno:1,sname:'aajay',mark:66};
+const myAns=React.createElement("h1",obj1, obj1.sname);
+const ans=React.createElement("h2",{},[myAns,obj1.sname,obj1.sno,obj1.mark]);         
+ReactDOM.render(ans, document.getElementById('root'));
+*/
+// ----------- Expression in JSX -----------------------
+//let a=10;
+//let b=20;
+//const data1=<h1>this is header {5*4} tag</h1>;
+//const data1=<h1>this is header {a*b} tag</h1>;
+//ReactDOM.render(data1, document.getElementById('root'));
+/*
+const myelement = (    
+    <ul>
+      <li>Apples</li>
+      <li>Bananas</li>
+      <li>Cherries</li>
+    </ul>    
+  );
+ ReactDOM.render(myelement, document.getElementById('root'));
+*/
+// elements must be closed
+//const myvar=<input type={Text}></input>;
+//const myvar=<input type={Text}/>
+/*
+const myvar1=<input type="Text"/>
+const myvar2=<input type="Text"/>
+
+const myvar=(
+<>
+{myvar1}
+{myvar2}
+</>
+);
+
+ReactDOM.render(myvar, document.getElementById('root'));
+*/
+// don't use attribute class in jsx (use only className)
+//const myelement1=<h1 className="TestClass">hello! Ajay,Thimothi</h1>;
+//ReactDOM.render(myelement1, document.getElementById('root'));
+//-----------------------------------------------------------------------
+// how to use if statement:
+/*const mark=9;
+let res="Fail";
+if(mark>49)
+{
+    res="PASS";
+}
+ReactDOM.render(res, document.getElementById('root'));
+*/
+//----------------jsx ternary ---------------
+/*let x=22;
+let y=31;
+let z=44;
+//let ans=<h1>{(x)>0 ? "possitive" : "negative"}</h1>;
+//let biggest=<h1>{(x)>(y)?(x):(y)}</h1>;
+let biggest=<h1>{(x)>(y) && (x)>(z)?(x):(y)>(z)?y:z}</h1>;
+
+ReactDOM.render(biggest,document.getElementById("root"));
+*/
+//-----------------------------------------------------------------------
+//--------props (properties basic)---------------------------------------
+//ReactDOM.render(<AjayThimothi bike='yamaha'></AjayThimothi>,document.getElementById("root"));
+// pass 2 parameters
+//ReactDOM.render(<AjayThimothi bike='yamaha' car="audi"></AjayThimothi>,document.getElementById("root"));
+// components using files:
+//ReactDOM.render(<Timothi/>,document.getElementById("root"));
+//===================
+//ReactDOM.render(<Mycomponent/>,document.getElementById('root'));
+//ReactDOM.render(<Myderive/>,document.getElementById('root'));
+//ReactDOM.render(<Testcons/>,document.getElementById('root'));
+//ReactDOM.render(<Testcons name='Ajay' age='25' />,document.getElementById('root'));
+//ReactDOM.render(<Testcons mymark='125' />,document.getElementById('root'));
+//ReactDOM.render(<Testcons/>,document.getElementById('root'));
+//ReactDOM.render(<MyComp/>,document.getElementById('root'));
+//ReactDOM.render(<LoopWork/>,document.getElementById('root'));
+
+//ReactDOM.render(<LoginFunction></LoginFunction>,document.getElementById('root'));
+//ReactDOM.render(<Example></Example>,document.getElementById('root'));
+ReactDOM.render(<Component1 />,document.getElementById('root'));
+
+/*
+function validatefun()
+    {
+        var uname=document.getElementById("un").value;
+        var pword=document.getElementById("pw").value;
+        //alert(uname);
+        //alert(pword);
+        if(uname==pword)
+        {
+            //alert("correct user");              
+            document.getElementById("res").innerHTML="correct user";
+        }
+        else
+        {
+            //alert("invalid user");
+            document.getElementById("res").innerHTML="Invalid user";
+        }        
+    }
+
+    const v=(
+        <>
+        
+        <label>Enter User Name:
+                <input type="text" id="un"></input>
+                </label>    
+        <label>Enter Password:
+                <input type="password" id="pw"></input>
+                </label>    
+            <br></br>
+            <button onClick={validatefun}>Login</button>            
+            <h1>Result:</h1>
+            <div id="res"></div>
+        
+        </>
+    );
+ReactDOM.render(v,document.getElementById('root'));
+*/
+
+//ReactDOM.render(<AjayHooksForms/>,document.getElementById('root'));
+
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+reportWebVitals();
